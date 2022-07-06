@@ -1,0 +1,13 @@
+<h1 class="my-4">Favorites</h1>
+<div class="row">
+    <div class="col-12 col-md-6 col-lg-3" *ngFor="let pokemon of (favorites$ | async)">
+        <app-pokemon-card [pokemon]="pokemon" [removeOption]="true"></app-pokemon-card>
+    </div>
+</div>
+
+<div *ngIf="pokemons.length === 0 && loaded" class="jumbotron jumbotron-fluid">
+    <div class="container">
+      <h1 class="display-4">There is no favorited pokemons!</h1>
+      <p class="lead">Add favorites on pokedex by clicking on star icon.</p>
+    </div>
+  </div>

@@ -1,0 +1,19 @@
+<div class="d-md-flex justify-content-between align-items-center">
+    <h1 class="my-4">Pokedex</h1>
+    <div class="form-group d-flex flex-nowrap align-items-center">
+        <label class="mr-2" for="exampleFormControlSelect1">Show</label>
+        <select (change)="getPokemonList(1)" [(ngModel)]="itemsPerPage" class="form-control" id="exampleFormControlSelect1">
+          <option *ngFor="let item of itemsPerPageOptions" [value]="item">{{item}} per page</option>
+        </select>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-12 col-md-6 col-lg-3" *ngFor="let pokemon of pokemons | paginate: {id: 'pokemon-list', itemsPerPage: itemsPerPage, currentPage: currentPage, totalItems: total }">
+        <app-pokemon-card [pokemon]="pokemon" [favorite]="favoriteIds.includes(pokemon.id) || false"></app-pokemon-card>
+    </div>
+</div>
+
+<div class="d-flex justify-content-center">
+    <pagination-controls (pageChange)="getPokemonList($event)" id="pokemon-list" ></pagination-controls>
+</div>

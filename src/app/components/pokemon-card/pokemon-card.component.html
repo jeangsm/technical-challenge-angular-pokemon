@@ -1,0 +1,12 @@
+<div class="card mb-4 position-relative">
+    <i (click)="onRemoveFavorite(pokemon)"style="cursor: pointer; right: 0" class="p-1 position-absolute material-icons" [ngClass]="{'text-primary': favorite, 'text-danger': removeOption}">{{removeOption ? 'delete' : 'star'}}</i>
+    <img src="{{pokemon.sprites.front_default}}" class="card-img-top" alt="{{pokemon.name}}">
+    <div class="card-body">
+        <h5 class="card-title text-capitalize">{{pokemon.name.replace('-',' ')}}</h5>
+    </div>
+    <div class="card-footer d-flex flex-row justify-content-between">
+        <div>
+        <span class="badge background-color-{{item.type.name}} text-capitalize mr-1" *ngFor="let item of pokemon.types">{{item.type.name}}</span>
+        </div>
+    </div>
+</div>

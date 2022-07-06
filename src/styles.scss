@@ -1,1 +1,119 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import "node_modules/bootstrap/scss/functions";
+@import "node_modules/bootstrap/scss/variables";
+@import "node_modules/bootstrap/scss/mixins";
+
+
+@import "node_modules/bootstrap/scss/badge";
+@import "node_modules/bootstrap/scss/buttons";
+@import "node_modules/bootstrap/scss/card";
+@import "node_modules/bootstrap/scss/forms";
+@import "node_modules/bootstrap/scss/grid";
+@import "node_modules/bootstrap/scss/jumbotron";
+@import "node_modules/bootstrap/scss/nav";
+@import "node_modules/bootstrap/scss/navbar";
+@import "node_modules/bootstrap/scss/reboot";
+@import "node_modules/bootstrap/scss/type";
+@import "node_modules/bootstrap/scss/utilities";
+
+@import "material-icons/iconfont/material-icons.css";
+
+
+// type badge backgrounds
+.background-color-bug {
+    background-color: #729f3f;
+    color: #fff
+}
+
+.background-color-dark {
+    background-color: #707070;
+    color: #fff
+}
+
+.background-color-dragon {
+    background-color: #53a4cf;
+    color: #fff
+}
+
+.background-color-electric {
+    background-color: #eed535;
+    color: #212121
+}
+
+.background-color-fairy {
+    background-color: #fdb9e9;
+    color: #212121
+}
+
+.background-color-fighting {
+    background-color: #d56723;
+    color: #fff
+}
+
+.background-color-fire {
+    background-color: #fd7d24;
+    color: #fff
+}
+
+.background-color-flying {
+    background-color: #3dc7ef;
+    color: #212121
+}
+
+.background-color-ghost {
+    background-color: #7b62a3;
+    color: #fff
+}
+
+.background-color-grass {
+    background-color: #9bcc50;
+    color: #212121
+}
+
+.background-color-ground {
+    background-color: #f7de3f;
+    color: #212121
+}
+
+.background-color-ice {
+    background-color: #51c4e7;
+    color: #212121
+}
+
+.background-color-normal {
+    background-color: #a4acaf;
+    color: #212121
+}
+
+.background-color-poison {
+    background-color: #b97fc9;
+    color: #fff
+}
+
+.background-color-psychic {
+    background-color: #f366b9;
+    color: #fff
+}
+
+.background-color-rock {
+    background-color: #a38c21;
+    color: #fff
+}
+
+.background-color-steel {
+    background-color: #9eb7b8;
+    color: #212121
+}
+
+.background-color-water {
+    background-color: #4592c4;
+    color: #fff
+}
+
+
+app-pokemon-card::ng-deep{
+    &:hover {
+        @extend .shadow;
+    }
+}
