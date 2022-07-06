@@ -2,10 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>AngularPokemon</title>
+  <title>Angular Pokémon</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="Angular Pokémon">
+  <meta property="og:description" content="Technical challenge for a frontend developer job made with Angular 14">
+  <meta property="og:image" content="https://assets.pokemon.com/static2/_ui/img/og-default-image.jpeg">
+
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-9DQFJGMZKD"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-9DQFJGMZKD');
+  </script>
 </head>
 <body>
   <app-root></app-root>
