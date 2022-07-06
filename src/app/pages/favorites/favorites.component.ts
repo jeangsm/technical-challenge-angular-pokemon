@@ -29,13 +29,6 @@ export class FavoritesComponent implements OnInit, OnDestroy {
       if(result.length == 0) {
         this.loaded = true;
       }
-
-      // result.forEach(id => {
-      //   this.pokemonService.getPokemonById(id).pipe(takeUntil(this.destroy$)).subscribe((response: any) => {
-      //     this.pokemons.push(response.body);
-      //   this.loaded = true;
-      //   });
-      // })
     });
   }
 

@@ -111,9 +111,6 @@
     color: #fff
 }
 
-
-app-pokemon-card::ng-deep{
-    &:hover {
-        @extend .shadow;
-    }
+.card:hover {
+    @extend .shadow-lg;
 }

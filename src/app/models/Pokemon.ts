@@ -9,7 +9,6 @@ type Sprites = {
     front_shiny_female: string
 }
 
-
 type Type = {
     name:   string;
     url:    string

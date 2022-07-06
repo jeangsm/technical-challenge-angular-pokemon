@@ -61,17 +61,11 @@ export class PokedexComponent implements OnInit {
     const requestArray: any = [];
     this.pokemonsNamedList.forEach(pokemon => {
       requestArray.push(this.pokemonService.getPokemonByName(pokemon.name));
-      // this.pokemonService.getPokemonByName(pokemon.name).subscribe((result: any) => {
-      //   this.pokemons.push(result.body)
-      //   // console.log(result.body)
-      // })
     });
     forkJoin(requestArray).subscribe((result: any) => {
       this.pokemons = result.map((item: any) => {
         return item.body;
       });
-      // this.pokemons.push(result.body)
-      console.log(result);
     });
   }
 }

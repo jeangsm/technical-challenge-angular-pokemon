@@ -31,11 +31,8 @@ export class PokemonService {
   setFavorite(pokemon: Pokemon) {
     this.store.pipe(select('favorites')).pipe(take(1)).subscribe(result => {
       if(result.filter(item => item.id == pokemon.id).length > 0) {
-        console.log('removeFavorite');
         this.store.dispatch(removeFavorite({favoriteId: pokemon.id}));
       } else {
-        console.log('addFavorite');
-
         this.getPokemonById(pokemon.id).pipe(take(1)).subscribe((result: any) => {
           this.store.dispatch(addFavorite({favoritePokemon: result.body}));
         });
